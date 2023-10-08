@@ -6,9 +6,6 @@ import { CartContext } from '../../Context/CartContext';
 
 export default function Address() {
 
-
-
-    // let navigate = useNavigate();
     let { onlinePayment, cartId } = useContext(CartContext)
     const [isLoading, setIsLoading] = useState(false);
     const phoneRegExp = /^(002)?01[0-25][0-9]{8}$/;
@@ -17,7 +14,7 @@ export default function Address() {
     async function addressSubmit(values) {
         setIsLoading(true)
 
-        let { data } = await onlinePayment(cartId, 'https://yousefnasra.github.io/FreshCart/#/', values)
+        let { data } = await onlinePayment(cartId, 'https://yousefnasra.github.io/FreshCart', values)
 
         if (data?.status === 'success') {
             setIsLoading(false)
