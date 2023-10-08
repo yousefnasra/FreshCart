@@ -9,7 +9,7 @@ export default function ProtectedRoute({ children }) {
     }
     else 
     {
-        return <Navigate to={'/login'} />
+        return <Navigate to={'login'} />
     }
 
 }

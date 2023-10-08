@@ -23,7 +23,7 @@ import VerifyCode from './Components/VerifyCode/VerifyCode'
 import NewPassword from './Components/NewPassword/NewPassword'
 
 
-const routes = createBrowserRouter([
+const routes = createHashRouter([
   {
     path: '', element: <Layout></Layout>, children: [
       { index: true, element: <ProtectedRoute><Home /> </ProtectedRoute> },
