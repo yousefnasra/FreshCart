@@ -23,7 +23,7 @@ export default function ResetPassword() {
 
         if (response?.data.statusMsg === 'success') {
             setIsLoading(false)
-            navigate('verifycode')
+            navigate('/verifycode')
         }
 
     }
