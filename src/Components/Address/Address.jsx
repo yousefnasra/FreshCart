@@ -14,7 +14,7 @@ export default function Address() {
     async function addressSubmit(values) {
         setIsLoading(true)
 
-        let { data } = await onlinePayment(cartId, 'https://yousefnasra.github.io/FreshCart', values)
+        let { data } = await onlinePayment(cartId, 'https://yousefnasra.github.io/FreshCart/#', values)
 
         if (data?.status === 'success') {
             setIsLoading(false)

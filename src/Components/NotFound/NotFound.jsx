@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 export default function NotFound() {
 
   let navigate = useNavigate();
-  if (window.location.href === "https://yousefnasra.github.io/FreshCart/allorders") {
+  if (window.location.href === "https://yousefnasra.github.io/FreshCart/#/allorders") {
     navigate('/allorders')
   }
 
