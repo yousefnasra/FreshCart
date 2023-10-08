@@ -73,7 +73,7 @@ export default function Cart() {
                     </div>
                   </div>
                 </div>)}
-              <Link to='address' className='btn btn-success mx-auto my-4 d-block'>Check Out</Link>
+              <Link to='/address' className='btn btn-success mx-auto my-4 d-block'>Check Out</Link>
             </>
             : <h3 className='mt-5 text-center fw-bold h6'><i className="fa-solid fa-cart-shopping fa-xl me-2 text-main"></i> Your Cart Is Empty</h3>}
         </ >
