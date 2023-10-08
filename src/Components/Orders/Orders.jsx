@@ -16,7 +16,9 @@ export default function Orders() {
     async function getUserOrders(userId) {
         setLoading(true)
         let { data } = await axios.get(`https://ecommerce.routemisr.com/api/v1/orders/user/${userId}`)
-        setOrders(data)
+        if(data.length !== 0){
+            setOrders(data)
+        }
         setLoading(false)
     }
 
@@ -59,7 +61,7 @@ export default function Orders() {
                             </div>
                         )}
                     </div>
-                    : <h4>There are no orders yet.</h4>
+                    : <h4 className='text-main'>There are no orders yet.</h4>
                 }
             </div>
             {loading ? <Loading></Loading> : ''}

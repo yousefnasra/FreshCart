@@ -50,6 +50,9 @@ export default function Navbar() {
               <li className="nav-item">
                 <NavLink to='brand' className="nav-link" >Brands</NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink to='allorders' className="nav-link" >Orders</NavLink>
+              </li>
             </ul>
             : ""}
 
