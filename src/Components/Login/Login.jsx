@@ -64,13 +64,13 @@ export default function Login() {
           <input type="password" className='form-control px-2 mb-3' placeholder='password' id='password' name='password' value={formik.values.password} onBlur={formik.handleBlur} onChange={formik.handleChange} />
           {formik.errors.password && formik.touched.password ? <div className="alert alert-danger p-2 mt-2">{formik.errors.password}</div> : ''}
 
-          <Link to='/resetpassword' className="text-main">Forgot password?</Link>
+          <Link to='/resetpassword' className="text-main mb-3">Forgot password?</Link>
 
           {isLoading
-            ? <button type='button' className='btn btn-success d-block ms-auto '>
+            ? <button type='button' className='btn btn-success d-block ms-auto mt-3'>
               <i className='fas fa-spinner fa-spin px-3'></i>
             </button>
-            : <div className="d-flex align-items-center">
+            : <div className="d-flex align-items-center mt-3">
               <button disabled={!(formik.isValid && formik.dirty)} type='submit' className='btn btn-success d-block ms-auto'>Submit</button>
               <Link to='register' className='btn ms-3'>Register Now</Link>
             </div>
