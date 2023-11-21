@@ -36,7 +36,7 @@ export default function Brands() {
           <div className="row g-4">
             {data?.data.data.map((brand) =>
               <div className="col-md-3" key={brand._id}>
-                <div onClick={() => getBrand(brand._id)} className="card" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div onClick={() => getBrand(brand._id)} className="card" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                   <div className="card-img">
                     <img src={brand.image} alt={brand.slug} className='w-100' />
                   </div>
@@ -46,12 +46,13 @@ export default function Brands() {
                 </div>
               </div>
             )}
-
+            
           </div>
           {loading
             ? <Loading></Loading>
             :
-            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
               <div className="modal-dialog">
                 <div className="modal-content">
                   <div className="modal-header">

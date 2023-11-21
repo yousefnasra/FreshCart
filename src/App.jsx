@@ -1,4 +1,4 @@
-import { RouterProvider, createHashRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Layout from './Components/Layout/Layout'
 import Home from './Components/Home/Home'
 import Cart from './Components/Cart/Cart'
@@ -23,7 +23,7 @@ import VerifyCode from './Components/VerifyCode/VerifyCode'
 import NewPassword from './Components/NewPassword/NewPassword'
 
 
-const routes = createHashRouter([
+const routes = createBrowserRouter([
   {
     path: '', element: <Layout></Layout>, children: [
       { index: true, element: <ProtectedRoute><Home /> </ProtectedRoute> },

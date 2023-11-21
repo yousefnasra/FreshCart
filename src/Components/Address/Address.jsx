@@ -14,7 +14,7 @@ export default function Address() {
     async function addressSubmit(values) {
         setIsLoading(true)
 
-        let { data } = await onlinePayment(cartId, 'https://yousefnasra.github.io/FreshCart', values)
+        let { data } = await onlinePayment(cartId, 'https://FreshCart.vercel.app', values)
 
         if (data?.status === 'success') {
             setIsLoading(false)
@@ -63,7 +63,7 @@ export default function Address() {
                     {formik.errors.city && formik.touched.city ? <div className="alert alert-danger p-2 mt-2">{formik.errors.city}</div> : ''}
 
                     {isLoading
-                        ? <button type='button' className='btn btn-success d-block ms-auto '>
+                        ? <button type='button' className='btn btn-success d-block mx-auto '>
                             <i className='fas fa-spinner fa-spin px-3'></i>
                         </button>
                         : <button disabled={!(formik.isValid && formik.dirty)} type='submit' className='btn btn-success d-block mx-auto'>Pay Now</button>

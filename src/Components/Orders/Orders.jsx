@@ -37,11 +37,8 @@ export default function Orders() {
                     <div className="row p-3">
                         {orders.map((order, index) =>
                             <div className="col-12 border-bottom p-2" key={order.id}>
-                                <h4 className='fw-bolder my-2'>order {index + 1}</h4>
+                                <h4 className='fw-bolder my-2'>Order_ID : <span className='text-main'>{order.id}</span></h4>
                                 <ul className='list-unstyled'>
-                                    <li>
-                                        <h6 className='fw-bolder'>Order_ID : <span className='text-muted'>{order.id}</span></h6>
-                                    </li>
                                     <li>
                                         <h6 className='fw-bolder'>Address : <span className='text-muted'>{order.shippingAddress.city}</span></h6>
                                     </li>
@@ -52,10 +49,7 @@ export default function Orders() {
                                         <h6 className='fw-bolder'>Phone : <span className='text-muted'>{order.shippingAddress.phone}</span></h6>
                                     </li>
                                     <li>
-                                        <h6 className='fw-bolder'>Payment type : <span className='text-main'>{order.paymentMethodType}</span></h6>
-                                    </li>
-                                    <li>
-                                        <h6 className='fw-bolder'>Total Order Price : <span className='text-main'>{order.totalOrderPrice} EGP</span></h6>
+                                        <h6 className='fw-bolder'>Total Order Price : {order.totalOrderPrice} <span className='text-main'>EGP</span></h6>
                                     </li>
                                 </ul>
                             </div>
