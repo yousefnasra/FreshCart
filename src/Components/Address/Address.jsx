@@ -14,7 +14,7 @@ export default function Address() {
     async function addressSubmit(values) {
         setIsLoading(true)
 
-        let { data } = await onlinePayment(cartId, 'https://FreshCart.vercel.app', values)
+        let { data } = await onlinePayment(cartId, 'https://fresh-cart-iota.vercel.app', values)
 
         if (data?.status === 'success') {
             setIsLoading(false)
